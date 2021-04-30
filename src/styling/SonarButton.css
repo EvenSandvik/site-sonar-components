@@ -1,0 +1,25 @@
+
+.buttonStyling {
+    height: 2rem;
+    border: none;
+    background-color: #6BA7EE;
+    color: white;
+    border-radius: 0.5rem;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+   cursor: pointer;
+   overflow: hidden;
+}
+.buttonStyling:hover {
+    transition-duration: 0.2s;
+    background-color: #93c0f8;
+}
+.buttonStyling:active {
+    transition-duration: 0.1s;
+    background-color: #8cbdf8;
+    color: #eff7ff;
+    box-shadow: 0 0 0.4rem #93c0f8;
+}
