@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
-import '../styling/SonarButton.css';
+import '../styling/SonarDropdownList.css';
 
 const SonarDropdownList = (props) => {
-  //TODO: onClick prop parameter
-  return (
-    <div style={{border: "1px solid #B5B5B5", width: '12rem', height: '2rem'}}></div>
-  );
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
+
+    return (
+        <div>
+            <div className="dropdownList" onClick={() => toggleMenu()}>{props.selectText}</div>
+            {menuOpen && <div className="dropdownMenu">
+                {props.options && props.options.map(function(element, index){
+                    return <div className="dropdownMenuElement" key={index}>{element}</div>;
+                })}
+            </div>}
+        </div>
+    );
 }
+
 export default SonarDropdownList;
-
-
-
-
