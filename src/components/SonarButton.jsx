@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import '../styling/SonarButton.css';
 
 const SonarButton = (props) => {
-
+  /**
+   * Styling constants
+   */
   const small = {
     width: '5rem',
   };
@@ -12,12 +14,35 @@ const SonarButton = (props) => {
   const large = {
     width: '10rem',
   };
+  const blue = {
+    backgroundColor: '#6BA7EE',
+    color: 'white'
+  };
+  const white = {
+    backgroundColor: '#FFFFFF',
+    color: 'black',
+  };
   
-
+  //TODO: onClick prop parameter
   return (
-    <button className="buttonStyling" style={props.size && props.size == 'small' ? small : props.size == "medium" ? medium : large}>
+    <button className="buttonStyling" style={Object.assign(size(), color())}>
         {props.buttonText}
       </button>
   );
+  
+   /**
+   * Styling functions
+   */
+  function size() {
+    return props.size && props.size == 'small' ? small : props.size == "medium" ? medium : large;
+  }
+
+  function color() {
+    return props.color && props.color == 'blue' ? blue : white;
+  }
 }
 export default SonarButton;
+
+
+
+

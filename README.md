@@ -6,4 +6,5 @@ Site Sonar is a tool for fetching grid site information from the WLCG, created b
 <SonarButton buttonText="Button Text" size="large"></SonarButton>
 
 size: small, medium, large
+
 buttonText: your custom text
