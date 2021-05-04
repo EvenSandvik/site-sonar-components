@@ -26,8 +26,8 @@ const SonarButton = (props) => {
   //TODO: onClick prop parameter
   return (
     <button className="buttonStyling" style={Object.assign(size(), color())}>
-        {props.buttonText}
-      </button>
+      {props.buttonText}
+    </button>
   );
   
    /**
@@ -38,11 +38,12 @@ const SonarButton = (props) => {
   }
 
   function color() {
-    return props.color && props.color == 'blue' ? blue : white;
+    switch(props.color) {
+      case 'blue':
+        return blue;
+      case 'white':
+        return white
+    }
   }
 }
 export default SonarButton;
-
-
-
-

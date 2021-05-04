@@ -1,0 +1,14 @@
+.filterButtonStyling{
+    border: none;
+    background-color: #EBEBEB;
+    color: #727272;
+    padding: 0.3rem 0.5rem;
+}
+.filterButtonStyling:hover{
+    background-color: #f5f5f5;
+    color: #acacac;
+}
+.filterButtonStyling:active{
+    background-color: #ececec;
+    color: #acacac;
+}

@@ -11,6 +11,7 @@ const SonarDropdownList = (props) => {
 
     return (
         <div>
+        <p className="label">{props.label}</p>
             <div className="dropdownList" onClick={() => toggleMenu()}>{props.selectText}</div>
             {menuOpen && <div className="dropdownMenu">
                 {props.options && props.options.map(function(element, index){

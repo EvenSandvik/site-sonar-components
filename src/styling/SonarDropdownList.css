@@ -28,6 +28,7 @@
    -ms-user-select: none; /* Internet Explorer/Edge */
    cursor: pointer;
    overflow: hidden;
+   position: absolute;
 }
 .dropdownMenuElement{
     padding: 0.3rem 0.5rem;
@@ -35,4 +36,9 @@
 .dropdownMenuElement:hover{
     color: #000000;
     background-color: #E9E9E9;
+}
+
+.label{
+    font-size: 1rem;
+    margin: 0;
 }
